@@ -1,1 +1,3 @@
-export default function Dashboard() { return <div>Dashboard</div> }
+export default function Dashboard() {
+  return <div>Dashboard — coming in Commit 8</div>;
+}
