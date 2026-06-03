@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.v1 import auth, tasks, admin
+from app.core.config import settings
 
 app = FastAPI(
     title="Task Manager API",
@@ -9,9 +10,14 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
+origins = [
+    "http://localhost:5173",
+    "https://task-manager-phi-lake.vercel.app",  # update after Vercel deploy
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],  # we'll tighten after both URLs are known
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
