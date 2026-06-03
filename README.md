@@ -1,4 +1,4 @@
-# Task Manager — Backend Developer Intern Assignment
+# Task Manager
 
 A full-stack task management app built with FastAPI + React, demonstrating secure REST API design, JWT authentication, role-based access control, and production deployment.
 
