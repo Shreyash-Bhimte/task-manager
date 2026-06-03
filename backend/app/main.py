@@ -12,12 +12,13 @@ app = FastAPI(
 
 origins = [
     "http://localhost:5173",
-    "https://task-manager-phi-lake.vercel.app",  # update after Vercel deploy
+    "https://task-manager-eosin-nine.vercel.app",
+    "https://task-manager-98awhmdg2-shreyash-bhimtes-projects.vercel.app",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # we'll tighten after both URLs are known
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
